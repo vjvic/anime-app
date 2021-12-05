@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Popular Anime</h2>
+  <div class="grid">
+    <app-anime-list
+      *ngFor="let anime of animeList"
+      [anime]="anime"
+    ></app-anime-list>
+  </div>
+</div>

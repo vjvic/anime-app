@@ -1,0 +1,21 @@
+.header {
+  background: #161853;
+  color: #fff;
+  padding: 1rem;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 760px) {
+  .header .container {
+    display: block;
+    text-align: center;
+  }
+  .header h1 {
+    padding-bottom: 1rem;
+  }
+}
