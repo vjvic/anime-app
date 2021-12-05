@@ -19,4 +19,9 @@ export class AnimeService {
     const url = `${this.apiUrl}search/anime?q=${search}=1`;
     return this.http.get<any>(url);
   }
+
+  getAnimeDetails(id: number): Observable<any> {
+    const url = `${this.apiUrl}anime/${id}`;
+    return this.http.get<any>(url);
+  }
 }

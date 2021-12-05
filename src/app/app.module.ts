@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { AnimeListComponent } from './components/anime-list/anime-list.component';
 import { ResultsComponent } from './pages/results/results.component';
+import { AnimeDetailsComponent } from './pages/anime-details/anime-details.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ResultsComponent } from './pages/results/results.component';
     SearchFormComponent,
     AnimeListComponent,
     ResultsComponent,
+    AnimeDetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

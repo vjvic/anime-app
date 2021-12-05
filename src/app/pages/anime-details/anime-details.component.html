@@ -1,0 +1,20 @@
+<div class="anime-details">
+  <div class="container">
+    <div class="anime-image">
+      <img [src]="anime.image_url" alt="" />
+    </div>
+
+    <div class="anime-info">
+      <h3 class="anime-title">{{ anime.title }}</h3>
+      <p class="anime-synopsis">{{ anime.synopsis }}</p>
+
+      <div>
+        <p><strong>Type:</strong> {{ anime.type }}</p>
+        <p><strong>Episodes:</strong> {{ anime.episodes }}</p>
+        <p><strong>Status: </strong>{{ anime.status }}</p>
+        <p><strong>Rating:</strong> {{ anime.rating }}</p>
+        <p><strong>Score:</strong> {{ anime.score }}</p>
+      </div>
+    </div>
+  </div>
+</div>

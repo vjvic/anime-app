@@ -88,6 +88,10 @@ select {
   /*  height: 100%; */
 }
 
+.anime-wrap {
+  cursor: pointer;
+}
+
 .anime-wrap h3 {
   padding-top: 0.5rem;
 }
