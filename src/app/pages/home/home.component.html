@@ -1,7 +1,8 @@
 <div class="container">
-  <h2>Popular Anime</h2>
   <div class="loader" *ngIf="isLoading">loading...</div>
-  <div class="grid" *ngIf="animeList">
+  <!--  popular -->
+  <h2>Popular Anime</h2>
+  <div class="rows" *ngIf="animeList">
     <app-anime-list
       *ngFor="let anime of animeList"
       [anime]="anime"

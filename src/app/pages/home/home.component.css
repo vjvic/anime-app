@@ -3,3 +3,10 @@ h2 {
   margin-top: 30px;
   font-weight: normal;
 }
+
+.rows {
+  margin-top: 50px;
+  display: flex;
+  grid-gap: 1rem;
+  overflow-x: auto;
+}

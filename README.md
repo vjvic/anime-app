@@ -1,6 +1,7 @@
 # AnimeApp
 
-AnimeApp created with angular
+AnimeApp created with angular. <br>
+I created this app for learning purposes.
 
 # Image
 

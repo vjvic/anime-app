@@ -90,6 +90,7 @@ select {
 
 .anime-wrap {
   cursor: pointer;
+  width: 200px;
 }
 
 .anime-wrap h3 {
