@@ -1,4 +1,4 @@
-<div (click)="onClick()" class="anime-wrap">
+<div (click)="onClick()" class="anime-wrap" *ngIf="anime">
   <img [src]="anime.image_url" alt="naruto" />
   <div>
     <h3>{{ anime.title }}</h3>

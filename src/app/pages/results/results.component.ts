@@ -11,6 +11,7 @@ import { AnimeService } from 'src/app/services/anime.service';
 export class ResultsComponent implements OnInit {
   animeList!: Anime[];
   params!: string;
+  isLoading: boolean = true;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -23,7 +24,11 @@ export class ResultsComponent implements OnInit {
 
       this.animeService
         .searchAnime(params['anime-search'])
-        .subscribe((anime) => (this.animeList = anime.results));
+        .subscribe(
+          (anime) => (
+            (this.animeList = anime.results), (this.isLoading = false)
+          )
+        );
     });
   }
 }

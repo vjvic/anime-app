@@ -1,4 +1,5 @@
-<div class="anime-details">
+<div *ngIf="isLoading" class="loader">loading...</div>
+<div class="anime-details" *ngIf="anime">
   <div class="container">
     <div class="anime-image">
       <img [src]="anime.image_url" alt="" />

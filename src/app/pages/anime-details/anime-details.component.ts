@@ -9,6 +9,7 @@ import { AnimeService } from 'src/app/services/anime.service';
 })
 export class AnimeDetailsComponent implements OnInit {
   anime: any;
+  isLoading: boolean = true;
 
   constructor(
     private activedRoute: ActivatedRoute,
@@ -19,7 +20,7 @@ export class AnimeDetailsComponent implements OnInit {
     this.activedRoute.params.subscribe((params: Params) =>
       this.animeService
         .getAnimeDetails(params['id'])
-        .subscribe((anime) => (this.anime = anime))
+        .subscribe((anime) => ((this.anime = anime), (this.isLoading = false)))
     );
   }
 }

@@ -1,13 +1,12 @@
 <div class="container">
   <h3 class="result-text">Search results for "{{ params }}"</h3>
-  <div class="grid">
-    <div *ngFor="let anime of animeList">
-      <div class="anime-wrap">
-        <img [src]="anime.image_url" alt="naruto" />
-        <div>
-          <h3>{{ anime.title }}</h3>
-        </div>
-      </div>
-    </div>
+
+  <div class="loader" *ngIf="isLoading">loading...</div>
+
+  <div class="grid" *ngIf="animeList">
+    <app-anime-list
+      *ngFor="let anime of animeList"
+      [anime]="anime"
+    ></app-anime-list>
   </div>
 </div>

@@ -9,12 +9,17 @@ import { AnimeService } from 'src/app/services/anime.service';
 })
 export class HomeComponent implements OnInit {
   animeList!: Anime[];
+  isLoading: boolean = true;
 
   constructor(private animeService: AnimeService) {}
 
   ngOnInit(): void {
     this.animeService
       .getTopAnime()
-      .subscribe((animeList) => (this.animeList = animeList.top));
+      .subscribe(
+        (animeList) => (
+          (this.animeList = animeList.top), (this.isLoading = false)
+        )
+      );
   }
 }
