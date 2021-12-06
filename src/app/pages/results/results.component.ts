@@ -24,11 +24,10 @@ export class ResultsComponent implements OnInit {
 
       this.animeService
         .searchAnime(params['anime-search'])
-        .subscribe(
-          (anime) => (
-            (this.animeList = anime.results), (this.isLoading = false)
-          )
-        );
+        .subscribe((anime) => {
+          this.animeList = anime.results;
+          this.isLoading = false;
+        });
     });
   }
 }

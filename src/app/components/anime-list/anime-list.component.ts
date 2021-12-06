@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Anime } from 'src/app/models';
-import { AnimeService } from 'src/app/services/anime.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,12 +10,11 @@ import { Router } from '@angular/router';
 export class AnimeListComponent implements OnInit {
   @Input() anime!: Anime;
 
-  constructor(private animeService: AnimeService, private router: Router) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
   onClick() {
-    console.log(this.anime);
     this.router.navigate(['anime-details', this.anime.mal_id]);
   }
 }

@@ -18,9 +18,10 @@ export class AnimeDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.activedRoute.params.subscribe((params: Params) =>
-      this.animeService
-        .getAnimeDetails(params['id'])
-        .subscribe((anime) => ((this.anime = anime), (this.isLoading = false)))
+      this.animeService.getAnimeDetails(params['id']).subscribe((anime) => {
+        this.anime = anime;
+        this.isLoading = false;
+      })
     );
   }
 }

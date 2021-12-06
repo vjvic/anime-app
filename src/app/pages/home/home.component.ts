@@ -14,12 +14,9 @@ export class HomeComponent implements OnInit {
   constructor(private animeService: AnimeService) {}
 
   ngOnInit(): void {
-    this.animeService
-      .getTopAnime()
-      .subscribe(
-        (animeList) => (
-          (this.animeList = animeList.top), (this.isLoading = false)
-        )
-      );
+    this.animeService.getTopAnime().subscribe((animeList) => {
+      this.animeList = animeList.top;
+      this.isLoading = false;
+    });
   }
 }
