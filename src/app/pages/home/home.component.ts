@@ -9,6 +9,8 @@ import { AnimeService } from 'src/app/services/anime.service';
 })
 export class HomeComponent implements OnInit {
   animeList!: Anime[];
+  upcoming!: Anime[];
+  airing!: Anime[];
   isLoading: boolean = true;
 
   constructor(private animeService: AnimeService) {}
@@ -16,6 +18,16 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.animeService.getTopAnime().subscribe((animeList) => {
       this.animeList = animeList.top;
+      this.isLoading = false;
+    });
+
+    this.animeService.getUpcomingAnime().subscribe((upcoming) => {
+      this.upcoming = upcoming.top;
+      this.isLoading = false;
+    });
+
+    this.animeService.getAiringAnime().subscribe((airing) => {
+      this.airing = airing.top;
       this.isLoading = false;
     });
   }

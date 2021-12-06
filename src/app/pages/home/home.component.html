@@ -8,4 +8,20 @@
       [anime]="anime"
     ></app-anime-list>
   </div>
+  <!--  upcoming -->
+  <h2>Upcoming</h2>
+  <div class="rows" *ngIf="upcoming">
+    <app-anime-list
+      *ngFor="let anime of upcoming"
+      [anime]="anime"
+    ></app-anime-list>
+  </div>
+  <!--  airing -->
+  <h2>Airing</h2>
+  <div class="rows" *ngIf="airing">
+    <app-anime-list
+      *ngFor="let anime of airing"
+      [anime]="anime"
+    ></app-anime-list>
+  </div>
 </div>

@@ -15,6 +15,16 @@ export class AnimeService {
     return this.http.get<any>(url);
   }
 
+  getUpcomingAnime(): Observable<any> {
+    const url = `${this.apiUrl}top/anime/1/upcoming`;
+    return this.http.get<any>(url);
+  }
+
+  getAiringAnime(): Observable<any> {
+    const url = `${this.apiUrl}top/anime/1/airing`;
+    return this.http.get<any>(url);
+  }
+
   searchAnime(search: string): Observable<any> {
     const url = `${this.apiUrl}search/anime?q=${search}=1`;
     return this.http.get<any>(url);
